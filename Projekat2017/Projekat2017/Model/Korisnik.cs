@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace POP_SF12016.Model
 { public  enum TipKorisnika
     {
-        Admin,
+        Administrator,
         Prodavac
     }
      public class Korisnik

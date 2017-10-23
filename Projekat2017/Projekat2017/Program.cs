@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using POP_SF12016.Test.Model;
+using POP_SF12016.Model;
 
 namespace Projekat2017
 {
     class Program
     {
+        static List<Namestaj> Namestaj { get; set; } = new List<Namestaj>();
         static void Main(string[] args)
         {
             Salon s1 = new Salon()
@@ -24,6 +26,20 @@ namespace Projekat2017
                 MaticniBroj = "3012996543",
                 Obrisan = false
             };
+            var sofaTipNamestaj = new TipNamestaja()
+            {
+                Id = 1,
+                Naziv = "Sofa"
+            };
+
+            Namestaj.Add(new Namestaj()
+            {
+                Id = 1,
+                JedinicnaCena = 28,
+                Naziv = "sofa 12",
+                Akcija = null
+
+            });
 
             Console.WriteLine("Dobrodosli u salon namestaja ");
             IspisiGlavniMeni();
@@ -34,16 +50,18 @@ namespace Projekat2017
             int izbor = 0;
             do
             {
-               Console.WriteLine("1.Rad sa namestajem");
-               Console.WriteLine("2.Rad sa tipom namestaja");
+                Console.WriteLine("1.Rad sa namestajem");
+                Console.WriteLine("2.Rad sa tipom namestaja");
                 //TODO - dodati ostale entitete 
-               Console.WriteLine("0.IZLAZ");
+                Console.WriteLine("0.IZLAZ");
 
-            } while (izbor < 0 || izbor > 2 );
+            } while (izbor < 0 || izbor > 2);
+            izbor = int.Parse(Console.ReadLine());
             switch (izbor)
             {
                 case 1:
                     IspisiMeniNamestaja();
+                    Console.ReadLine();
                     break;
                 case 2:
                     IspisiMeniTipaNamestaja();
@@ -51,7 +69,7 @@ namespace Projekat2017
 
                 default:
                     break;
-            
+
             }
         }
 
@@ -72,7 +90,7 @@ namespace Projekat2017
                 Console.WriteLine("0.Povratak na glavni meni");
             } while (izbor < 0 || izbor > 4);
             izbor = int.Parse(Console.ReadLine());
-            switch(izbor)
+            switch (izbor)
             {
                 case 1:
                     IzlistajNamestaj();
@@ -91,7 +109,17 @@ namespace Projekat2017
 
             }
 
+        }
+
+        private static void IzlistajNamestaj()
+        {
+            int index = 0;
+            Console.WriteLine("====== LISTA NAMESTAJA =====");
+            foreach (var namestaj in Namestaj)
+            {
+                Console.WriteLine($"{++index }.{namestaj.Naziv}, cena: {namestaj.JedinicnaCena}");
             }
+        }
 
         private static void ObrisiNamestaj()
         {
@@ -105,13 +133,34 @@ namespace Projekat2017
 
         private static void DodajNamestaj()
         {
-            throw new NotImplementedException();
-        }
+            Console.WriteLine("Unesite sledece podatke: ");
+            Console.WriteLine("Id: ");
+            Console.WriteLine("Naziv: ");
 
-        private static void IzlistajNamestaj()
-        {
-          
-        }
+            Console.WriteLine("Tip Namestaja: ");
+            string TipNamestaja = Console.ReadLine();
+            Namestaj n1 = new Namestaj();
+ 
+                          
+
+        } }
+            
+
+            
+
+            }
+               
+
+            }
+                
+
+
+
+
+
+            }
+                    }
+
+
     }
-    }
-}
+    

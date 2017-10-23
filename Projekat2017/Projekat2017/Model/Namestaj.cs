@@ -15,5 +15,11 @@ namespace POP_SF12016.Model
         public string TipNamestaja { get; set; }
         public TipNamestaja MyProperty { get; set; }
         public int Kolicina { get; set; }
+        public object Akcija { get; internal set; }
+
+        internal void Add(int id1)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
