@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using POP_SF12016.Test.Model;
 using POP_SF12016.Model;
+using Projekat2017.Util;
+using Projekat2017.Model;
 
 namespace Projekat2017
 {
@@ -13,6 +15,10 @@ namespace Projekat2017
         static List<Namestaj> Namestaj { get; set; } = new List<Namestaj>();
         static void Main(string[] args)
         {
+
+
+
+
             Salon s1 = new Salon()
             {
                 Id = 1,
@@ -31,7 +37,35 @@ namespace Projekat2017
                 Id = 1,
                 Naziv = "Sofa"
             };
+            var kauc = new TipNamestaja()
+            {
+                Id = 4,
+                Naziv = "Kauc"
+            };
+            var n1 = new Namestaj()
+            {
+                Id = 1,
+                Naziv = " bla bla ",
+                JedinicnaCena = 28,
+                KolicinaUMagacinu = 4,
+                Sifra = " sdasda",
+                TipN = sofaTipNamestaj
 
+            };
+            var n2 = new Namestaj()
+            {
+                Id = 2,
+                Naziv = " dasd",
+                JedinicnaCena = 45,
+                KolicinaUMagacinu = 5,
+                Sifra = " SS334",
+                TipN = kauc
+            };
+            var ln1 = new List<Namestaj>();
+            ln1.Add(n1);
+            ln1.Add(n2);
+            GenericSerializer.Serialize<Namestaj>("namestaj.xml", ln1);
+            List<Namestaj> ln2 = GenericSerializer.Deserialize<Namestaj>("namestaj.xml");
             Namestaj.Add(new Namestaj()
             {
                 Id = 1,
@@ -135,32 +169,36 @@ namespace Projekat2017
         {
             Console.WriteLine("Unesite sledece podatke: ");
             Console.WriteLine("Id: ");
+            int id1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Naziv: ");
+            string naziv1 = Console.ReadLine();
+            Console.WriteLine("Unesite jedinicnu cenu: ");
+            double JedCena = double.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite kolicinu u magacinu: ");
+            int KolUMagacinu = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite sifru uredjaja: ");
+            string sifra1 = Console.ReadLine();
+            Console.WriteLine("Unesite Id  tipa uredjaja: ");
+            int IdTipaUredjaja = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Tip Namestaja: ");
-            string TipNamestaja = Console.ReadLine();
-            Namestaj n1 = new Namestaj();
- 
-                          
 
-        } }
-            
 
-            
-
+            //traziti unos ID tipa namestaja 
+            List<Namestaj> namestaj = Projekat.Instance.Namestaj;
+            int i = 0;
+            foreach (var komad in namestaj)
+            {
+                Console.WriteLine($"{++i}| {komad.Naziv}");
             }
-               
-
-            }
-                
+            Console.ReadLine();
 
 
 
-
-
-            }
-                    }
-
-
+        }
     }
+}
+
+
+
+
     

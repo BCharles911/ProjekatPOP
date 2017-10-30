@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namestaj>
+    <Id>1</Id>
+    <Naziv> bla bla </Naziv>
+    <JedinicnaCena>28</JedinicnaCena>
+    <KolicinaUMagacinu>4</KolicinaUMagacinu>
+    <TipN>
+      <Id>1</Id>
+      <Naziv>Sofa</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipN>
+    <Kolicina>0</Kolicina>
+    <Sifra> sdasda</Sifra>
+  </Namestaj>
+  <Namestaj>
+    <Id>2</Id>
+    <Naziv> dasd</Naziv>
+    <JedinicnaCena>45</JedinicnaCena>
+    <KolicinaUMagacinu>5</KolicinaUMagacinu>
+    <TipN>
+      <Id>4</Id>
+      <Naziv>Kauc</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipN>
+    <Kolicina>0</Kolicina>
+    <Sifra> SS334</Sifra>
+  </Namestaj>
+</ArrayOfNamestaj>
