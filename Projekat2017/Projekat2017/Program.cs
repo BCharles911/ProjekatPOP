@@ -167,6 +167,8 @@ namespace Projekat2017
 
         private static void DodajNamestaj()
         {
+
+            try { 
             Console.WriteLine("Unesite sledece podatke: ");
             Console.WriteLine("Id: ");
             int id1 = int.Parse(Console.ReadLine());
@@ -180,18 +182,64 @@ namespace Projekat2017
             string sifra1 = Console.ReadLine();
             Console.WriteLine("Unesite Id  tipa uredjaja: ");
             int IdTipaUredjaja = int.Parse(Console.ReadLine());
+            var n3 = new Namestaj()
+            {
+                Id = id1,
+                Naziv = naziv1,
+                JedinicnaCena = JedCena,
+                KolicinaUMagacinu = KolUMagacinu,
+                Sifra = sifra1
+            };
+            var ln1 = new List<Namestaj>();
+            ln1.Add(n3);
+            GenericSerializer.Serialize<Namestaj>("namestaj.xml", ln1);
+            List<Namestaj> ln2 = GenericSerializer.Deserialize<Namestaj>("namestaj.xml");
+            Namestaj.Add(new Namestaj());
+            Console.WriteLine("Da li zelite da unesete novi uredjaj1/2: ");
+            int loop = int.Parse(Console.ReadLine());
+
+            switch (loop)
+            {
+                case 1:
+                    Console.WriteLine("Odabrali ste da unesete novi uredjaj: ");
+                    DodajNamestaj();
+                    break;
+                case 2:
+                    IspisiMeniNamestaja();
+                    break;
+
+            }
+
+
+
+            }
+
+            catch (ArgumentException)
+            {
+
+                Console.WriteLine("Unesite odgovarajucu vrednost");
+                DodajNamestaj();
+            }
+
+
+
+
+
+
+
+
 
 
 
             //traziti unos ID tipa namestaja 
-            List<Namestaj> namestaj = Projekat.Instance.Namestaj;
-            int i = 0;
-            foreach (var komad in namestaj)
-            {
-                Console.WriteLine($"{++i}| {komad.Naziv}");
-            }
-            Console.ReadLine();
-
+            /*            List<Namestaj> namestaj = Projekat.Instance.Namestaj;
+                        int i = 0;
+                        foreach (var komad in namestaj)
+                        {
+                            Console.WriteLine($"{++i}| {komad.Naziv}");
+                        }
+                        Console.ReadLine();
+                        */
 
 
         }
