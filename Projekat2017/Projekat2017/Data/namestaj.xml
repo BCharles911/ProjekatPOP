@@ -26,4 +26,12 @@
     <Kolicina>0</Kolicina>
     <Sifra> SS334</Sifra>
   </Namestaj>
+  <Namestaj>
+    <Id>5</Id>
+    <Naziv>fdgdfgdf</Naziv>
+    <JedinicnaCena>56</JedinicnaCena>
+    <KolicinaUMagacinu>55</KolicinaUMagacinu>
+    <Kolicina>0</Kolicina>
+    <Sifra>44433</Sifra>
+  </Namestaj>
 </ArrayOfNamestaj>

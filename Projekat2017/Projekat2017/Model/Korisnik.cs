@@ -19,4 +19,10 @@ namespace POP_SF12016.Model
         public string Lozinka { get; set; }
         public bool Obrisan { get; set; }
     }
+
+
+
 }
+
+
+

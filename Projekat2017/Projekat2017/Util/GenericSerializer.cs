@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Projekat2017.Util
@@ -49,11 +50,13 @@ namespace Projekat2017.Util
         }
 
 
-    //using keyword u okviru toka izvrsavanja programa  pr : using( deklarisemo promenjive za koje smo sigurni da ce biti unistene prilikom izlaska iz bloka)
-    // using( var 0 = new object () ){ 
-    // o.naziv = pera;
-    // } uradi se poziv dispose metode nad tom promenljivom
-    //proces komadanja informacija | @-neophodno kada se korsite apsolutne putanje
+
+
+        //using keyword u okviru toka izvrsavanja programa  pr : using( deklarisemo promenjive za koje smo sigurni da ce biti unistene prilikom izlaska iz bloka)
+        // using( var 0 = new object () ){ 
+        // o.naziv = pera;
+        // } uradi se poziv dispose metode nad tom promenljivom
+        //proces komadanja informacija | @-neophodno kada se korsite apsolutne putanje
 
 
     }

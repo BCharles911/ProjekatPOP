@@ -45,6 +45,7 @@
     <Compile Include="Model\Akcija.cs" />
     <Compile Include="Model\DodatnaUsluga.cs" />
     <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Model\Login.cs" />
     <Compile Include="Model\Namestaj.cs" />
     <Compile Include="Model\ProdajaNamestaja.cs" />
     <Compile Include="Model\Projekat.cs" />
@@ -58,7 +59,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="WPF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\namestaj.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

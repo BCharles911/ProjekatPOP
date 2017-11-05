@@ -12,6 +12,8 @@ namespace Projekat2017
 {
     class Program
     {
+        private static IEnumerable<object> ln2;
+
         static List<Namestaj> Namestaj { get; set; } = new List<Namestaj>();
         static void Main(string[] args)
         {
@@ -61,7 +63,7 @@ namespace Projekat2017
                 Sifra = " SS334",
                 TipN = kauc
             };
-            var ln1 = new List<Namestaj>();
+            /*var ln1 = new List<Namestaj>();
             ln1.Add(n1);
             ln1.Add(n2);
             GenericSerializer.Serialize<Namestaj>("namestaj.xml", ln1);
@@ -74,6 +76,9 @@ namespace Projekat2017
                 Akcija = null
 
             });
+            
+            Namestaj.Add(n2);*/
+
 
             Console.WriteLine("Dobrodosli u salon namestaja ");
             IspisiGlavniMeni();
@@ -91,14 +96,13 @@ namespace Projekat2017
 
             } while (izbor < 0 || izbor > 2);
             izbor = int.Parse(Console.ReadLine());
-            switch (izbor)
+            switch(izbor)
             {
                 case 1:
                     IspisiMeniNamestaja();
-                    Console.ReadLine();
                     break;
                 case 2:
-                    IspisiMeniTipaNamestaja();
+                    Console.WriteLine("Nista");
                     break;
 
                 default:
@@ -109,7 +113,17 @@ namespace Projekat2017
 
         private static void IspisiMeniTipaNamestaja()
         {
-            throw new NotImplementedException();
+            int izbor = 0;
+            do
+            {
+                Console.WriteLine("1.");
+            } while (izbor < 0 || izbor > 4);
+            izbor = int.Parse(Console.ReadLine());
+            switch(izbor)
+            {
+                case 1:
+                    break;
+            }
         }
 
         private static void IspisiMeniNamestaja()
@@ -139,6 +153,7 @@ namespace Projekat2017
                     ObrisiNamestaj();
                     break;
                 default:
+                    IspisiGlavniMeni();
                     break;
 
             }
@@ -147,12 +162,31 @@ namespace Projekat2017
 
         private static void IzlistajNamestaj()
         {
+            List<Namestaj> ln2 = GenericSerializer.Deserialize<Namestaj>("namestaj.xml");
+
+
+
             int index = 0;
             Console.WriteLine("====== LISTA NAMESTAJA =====");
-            foreach (var namestaj in Namestaj)
+            foreach (var namestaj in ln2)
             {
                 Console.WriteLine($"{++index }.{namestaj.Naziv}, cena: {namestaj.JedinicnaCena}");
+                Console.WriteLine("----------------------------------------");
             }
+            Console.WriteLine("Pritisnite enter za povratak na meni"); 
+            var back = Console.ReadLine();
+            if (back == "")
+            {
+                IspisiMeniNamestaja();
+            }
+            else
+            {
+                Console.WriteLine("Pritisnite samo enter");
+                Console.ReadLine();
+                IspisiMeniNamestaja();
+            }
+
+
         }
 
         private static void ObrisiNamestaj()
@@ -182,7 +216,7 @@ namespace Projekat2017
             string sifra1 = Console.ReadLine();
             Console.WriteLine("Unesite Id  tipa uredjaja: ");
             int IdTipaUredjaja = int.Parse(Console.ReadLine());
-            var n3 = new Namestaj()
+             var n3 = new Namestaj()
             {
                 Id = id1,
                 Naziv = naziv1,
@@ -190,11 +224,11 @@ namespace Projekat2017
                 KolicinaUMagacinu = KolUMagacinu,
                 Sifra = sifra1
             };
-            var ln1 = new List<Namestaj>();
-            ln1.Add(n3);
-            GenericSerializer.Serialize<Namestaj>("namestaj.xml", ln1);
             List<Namestaj> ln2 = GenericSerializer.Deserialize<Namestaj>("namestaj.xml");
-            Namestaj.Add(new Namestaj());
+             //Namestaj.Add(n3);
+            ln2.Add(n3);
+            GenericSerializer.Serialize<Namestaj>("namestaj.xml", ln2);
+      //      Namestaj.Add(new Namestaj());
             Console.WriteLine("Da li zelite da unesete novi uredjaj1/2: ");
             int loop = int.Parse(Console.ReadLine());
 
@@ -220,6 +254,8 @@ namespace Projekat2017
                 Console.WriteLine("Unesite odgovarajucu vrednost");
                 DodajNamestaj();
             }
+
+
 
 
 
