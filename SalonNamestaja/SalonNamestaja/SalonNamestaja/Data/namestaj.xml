@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namestaj>
+    <Id>44</Id>
+    <Naziv>Razvlaciva Sofa</Naziv>
+    <Cena>28</Cena>
+    <KolicinaUMagacinu>5</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
+    <Kolicina>5</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>2</Id>
+    <Naziv>Kauc</Naziv>
+    <Cena>340</Cena>
+    <KolicinaUMagacinu>10</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
+    <Kolicina>0</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>3</Id>
+    <Naziv>Trosed</Naziv>
+    <Cena>344</Cena>
+    <KolicinaUMagacinu>10</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
+    <Kolicina>0</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>4</Id>
+    <Naziv>Sto za 6 osoba</Naziv>
+    <Cena>550</Cena>
+    <KolicinaUMagacinu>0</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
+    <Kolicina>0</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>5</Id>
+    <Naziv />
+    <Cena>0</Cena>
+    <KolicinaUMagacinu>0</KolicinaUMagacinu>
+    <TipNamestajaId>2</TipNamestajaId>
+    <Kolicina>0</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>6</Id>
+    <Naziv>sadads</Naziv>
+    <Cena>321</Cena>
+    <KolicinaUMagacinu>0</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
+    <Kolicina>0</Kolicina>
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+</ArrayOfNamestaj>
