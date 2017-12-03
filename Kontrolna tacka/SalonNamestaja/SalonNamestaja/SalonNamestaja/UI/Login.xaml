@@ -1,0 +1,17 @@
+﻿<Window x:Class="SalonNamestaja.UI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonNamestaja.UI"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="tbKorIme" HorizontalAlignment="Left" Height="24" Margin="60,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" SpellCheck.IsEnabled="True"/>
+        <PasswordBox x:Name="tbPass" HorizontalAlignment="Left" Height="23" Margin="60,153,0,0"  VerticalAlignment="Top" Width="174"/>
+        <Label x:Name="lblKorIme" Content="Korisnicko ime" HorizontalAlignment="Left" Margin="60,45,0,0" VerticalAlignment="Top" Width="93"/>
+        <Label x:Name="lblPass" Content="Password" HorizontalAlignment="Left" Margin="60,122,0,0" VerticalAlignment="Top" Height="26" Width="93" Cursor="None"/>
+        <Button Content="Prijava" HorizontalAlignment="Left" Margin="93,197,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="btnLogin_Click"/>
+
+    </Grid>
+</Window>

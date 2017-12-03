@@ -1,0 +1,25 @@
+﻿<Window x:Class="SalonNamestaja.UI.DodajIzmeniKorisnika"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonNamestaja.UI"
+        mc:Ignorable="d"
+        Title="DodajIzmeniKorisnika" Height="393.385" Width="419.066">
+    <Grid>
+        <Label x:Name="lblIme" Content="Ime" HorizontalAlignment="Left" Margin="24,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,1.382" Width="92"/>
+        <Label x:Name="lblPrezime" Content="Prezime" HorizontalAlignment="Left" Margin="24,148,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="lblKorisnickoIme" Content="Korisnicko ime" HorizontalAlignment="Left" Margin="24,186,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.482,1.877"/>
+        <Label x:Name="Lozinka" Content="Lozinka" HorizontalAlignment="Left" Margin="24,219,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.482,1.877"/>
+        <Label Content="Tip Korisnika" HorizontalAlignment="Left" Margin="24,250,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.482,1.877"/>
+        <TextBox x:Name="tbIme" HorizontalAlignment="Left" Height="23" Margin="132,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Text="{Binding Path=Ime}"/>
+        <TextBox x:Name="tbPrezime" HorizontalAlignment="Left" Height="23" Margin="132,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Text="{Binding Path=Prezime}"/>
+        <TextBox x:Name="tbKorisnickoIme" HorizontalAlignment="Left" Height="23" Margin="132,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Text="{Binding Path=KorisnickoIme}"/>
+        <PasswordBox x:Name="pbLozinka" HorizontalAlignment="Left" Margin="132,222,0,0" VerticalAlignment="Top" Width="231" Height="23"/>
+        <ComboBox x:Name="cmbTipKorisnika" HorizontalAlignment="Left" Margin="243,254,0,0" VerticalAlignment="Top" Width="120" Text="{Binding Path=TipKorisnika}"/>
+        <Label x:Name="lblDodajKorisnika" Content="Dodaj korisnika" HorizontalAlignment="Left" Margin="57,26,0,0" VerticalAlignment="Top" Width="292" FontSize="36" FontFamily="Raleway" />
+        <Button x:Name="btnSacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="49,310,0,0" VerticalAlignment="Top" Width="129" Height="26" Cursor="Arrow" Click="btnSacuvaj_Click"/>
+        <Button x:Name="btnOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="195,310,0,0" VerticalAlignment="Top" Width="129" Height="26" Click="btnOtkazi_Click"/>
+
+    </Grid>
+</Window>

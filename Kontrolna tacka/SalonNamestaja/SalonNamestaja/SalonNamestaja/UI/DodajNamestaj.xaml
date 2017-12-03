@@ -1,0 +1,24 @@
+﻿<Window x:Class="SalonNamestaja.UI.DodajNamestaj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonNamestaja.UI"
+        mc:Ignorable="d"
+        Title="DodajNamestaj" Height="500
+        " Width="371">
+    <Grid>
+        <Label Content="Dodavanje namestaja" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="61,10,0,0" Width="236" FontSize="24" FontFamily="Roboto Thin"/>
+        <Label Content="Tip namestaja" HorizontalAlignment="Left" Margin="26,296,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label Content="Kolicina u magacinu:" HorizontalAlignment="Left" Margin="26,252,0,0" VerticalAlignment="Top"/>
+        <Label Content="Naziv:" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" />
+        <Label Content="Cena:" HorizontalAlignment="Left" Margin="26,203,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="26,411,0,0" VerticalAlignment="Top" Width="147" Height="38" Click="btnSacuvaj_click"/>
+        <Button x:Name="btnOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="182,411,0,0" VerticalAlignment="Top" Width="147" Height="38" Click="Izlaz"/>
+        <TextBox x:Name="tbNaziv" HorizontalAlignment="Left" Height="23" Margin="148,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Text="{Binding Path= Naziv}"/>
+        <TextBox x:Name="tbCena" HorizontalAlignment="Left" Height="23" Margin="148,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Text="{Binding Path= Cena}"/>
+        <TextBox x:Name="tbKolicina" HorizontalAlignment="Left" Height="23" Margin="149,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <ComboBox x:Name="cmbTipNamestaja" HorizontalAlignment="Left" Margin="164,300,0,0" VerticalAlignment="Top" Width="165" SelectedItem="{Binding Path=TipNamestaja}" />
+
+    </Grid>
+</Window>
