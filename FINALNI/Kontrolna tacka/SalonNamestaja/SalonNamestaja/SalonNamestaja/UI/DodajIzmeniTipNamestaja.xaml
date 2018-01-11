@@ -1,0 +1,31 @@
+﻿<Window x:Class="SalonNamestaja.UI.DodajIzmeniTipNamestaja"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonNamestaja.UI"
+        mc:Ignorable="d"
+        Title="Dodavanje tipa namestaja" Height="221.77" Width="300">
+    <Window.Background>
+        <ImageBrush ImageSource="/SalonNamestaja;component/images/hd_polygonal_texture_background_by_paradisiacpicture-d8fpyo1.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,2,0">
+        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="57,148,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_Click" Height="25" FontSize="10" BorderThickness="0" Foreground="#FF286E44">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.8"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Otkazi" HorizontalAlignment="Left" Margin="158,148,0,0" VerticalAlignment="Top" Width="75" Click="btnOtkazi_Click" Height="25" FontSize="10" BorderThickness="0" Foreground="#FF286E44">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.8"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Ime tipa namestaja" HorizontalAlignment="Left" Margin="7,74,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFF9F8F8"/>
+        <TextBox x:Name="tbNazivTipaNamestaja" Height="23" Margin="120,77,0,0" TextWrapping="Wrap" Text="{Binding Path=Naziv}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153" BorderThickness="0">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.9"/>
+            </TextBox.Background>
+        </TextBox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="SalonNamestaja.UI.DodajNamestaj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalonNamestaja.UI"
+        mc:Ignorable="d"
+        Title="DodajNamestaj" Height="500
+        " Width="399">
+    <Window.Background>
+        <ImageBrush ImageSource="/SalonNamestaja;component/images/hd_polygonal_texture_background_by_paradisiacpicture-d8fpyo1.jpg" Opacity="0.8"/>
+    </Window.Background>
+    <Grid>
+        <Label Content="Dodavanje namestaja" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="58,35,0,0" Width="299" FontSize="30" FontFamily="Roboto Light" Foreground="White"/>
+        <Label Content="Tip namestaja" HorizontalAlignment="Left" Margin="26,291,0,0" VerticalAlignment="Top" Width="138" Foreground="#FFF9EFEF"/>
+        <Label Content="Kolicina u magacinu:" HorizontalAlignment="Left" Margin="25,245,0,0" VerticalAlignment="Top" Foreground="#FFF9EFEF"/>
+        <Label Content="Naziv:" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" Foreground="#FFF9EFEF" />
+        <Label Content="Cena:" HorizontalAlignment="Left" Margin="26,203,0,0" VerticalAlignment="Top" Foreground="#FFF9EFEF"/>
+        <Button x:Name="btnSacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="40,411,0,0" VerticalAlignment="Top" Width="147" Height="38" Click="btnSacuvaj_click" BorderThickness="0" Opacity="0.8">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0.76"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="btnOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="196,411,0,0" VerticalAlignment="Top" Width="147" Height="38" Click="Izlaz" BorderThickness="0" Opacity="0.8">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0.76"/>
+            </Button.Foreground>
+        </Button>
+        <TextBox x:Name="tbNaziv" HorizontalAlignment="Left" Height="23" Margin="148,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Text="{Binding Path= Naziv}" BorderThickness="0" Opacity="0.8"/>
+        <TextBox x:Name="tbCena" HorizontalAlignment="Left" Height="23" Margin="148,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Text="{Binding Path= Cena}" BorderThickness="0" Opacity="0.8"/>
+        <TextBox x:Name="tbKolicina" HorizontalAlignment="Left" Height="23" Margin="148,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Path=KolicinaUMagacinu}" Width="180" BorderThickness="0" Opacity="0.8"/>
+        <ComboBox x:Name="cmbTipNamestaja" HorizontalAlignment="Left" Margin="164,295,0,0" VerticalAlignment="Top" Width="165" SelectedItem="{Binding Path=TipNamestaja}" >
+            <ComboBox.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0.8"/>
+            </ComboBox.Foreground>
+        </ComboBox>
+        <Label Content="Akcija" HorizontalAlignment="Left" Margin="29,339,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="White"/>
+        <ComboBox x:Name="cmbAkcije" SelectedItem="{Binding Path=Akcija}" HorizontalAlignment="Left" Margin="164,341,0,0" VerticalAlignment="Top" Width="165"/>
+        <CheckBox x:Name="checkBoxAkcija" Content="Nije na akciji" Unchecked="checkBoxAkcija_Unchecked" Checked="checkBoxAkcija_Checked" HorizontalAlignment="Left" Margin="164,368,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFFDFDFD" FontSize="9">
+            <CheckBox.BorderBrush>
+                <SolidColorBrush Color="#FF07F9EE" Opacity="0.5"/>
+            </CheckBox.BorderBrush>
+        </CheckBox>
+
+    </Grid>
+</Window>

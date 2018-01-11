@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKorisnik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Korisnik>
+    <tipkorisnika>Administrator</tipkorisnika>
+    <Id>1</Id>
+    <Ime>Andrej</Ime>
+    <Prezime>Djapic</Prezime>
+    <KorisnickoIme>a</KorisnickoIme>
+    <Lozinka>a</Lozinka>
+    <Tip>Administrator</Tip>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <tipkorisnika>Administrator</tipkorisnika>
+    <Id>2</Id>
+    <Ime>Pero</Ime>
+    <Prezime>Peric</Prezime>
+    <KorisnickoIme>p</KorisnickoIme>
+    <Lozinka>p</Lozinka>
+    <Tip>Administrator</Tip>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <tipkorisnika>Administrator</tipkorisnika>
+    <Id>3</Id>
+    <Ime>asd</Ime>
+    <Prezime>sadd</Prezime>
+    <KorisnickoIme>b</KorisnickoIme>
+    <Lozinka />
+    <Tip>Administrator</Tip>
+    <Obrisan>true</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <tipkorisnika>Administrator</tipkorisnika>
+    <Id>4</Id>
+    <Ime>ds</Ime>
+    <Prezime>as</Prezime>
+    <KorisnickoIme>ar</KorisnickoIme>
+    <Lozinka />
+    <Tip>Administrator</Tip>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+</ArrayOfKorisnik>
